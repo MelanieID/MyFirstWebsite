@@ -39,5 +39,48 @@
     <footer>
         <p>&copy; 2024 Portfolio </p>
     </footer>
+ <!-- Contenedor principal del slider -->
+ <div class="slider-container">
+    <!-- Contenedor de las imágenes -->
+    <div class="slider-content">
+        <!-- Primera imagen del slider -->
+        <div class="slider-item">
+            <img src="imagen1.png" alt="Imagen 1">
+        </div>
+        <!-- Segunda imagen del slider -->
+        <div class="slider-item">
+            <img src="imagen2.png" alt="Imagen 2">
+        </div>
+        <!-- Tercera imagen del slider -->
+        <div class="slider-item">
+            <img src="imagen3.png" alt="Imagen 3">
+        </div>
+    </div>
+</div>
+<!-- JavaScript para controlar el slider -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let slideIndex = 0; // Inicializa el índice de las imágenes
+
+        // Obtiene todas las imágenes del slider
+        const slides = document.querySelectorAll(".slider-item");
+        const totalSlides = slides.length; // Calcula el número total de imágenes
+
+        // Función para mostrar las imágenes del slider
+        function showSlides() {
+            slides.forEach(slide => {
+                slide.style.display = "none"; // Oculta todas las imágenes
+            });
+
+            slideIndex++; // Aumenta el índice de la imagen actual
+            if (slideIndex > totalSlides) { slideIndex = 1; } // Reinicia el índice si es mayor que el número total de imágenes
+
+            slides[slideIndex - 1].style.display = "block"; // Muestra la imagen actual
+            setTimeout(showSlides, 2000); // Cambia de imagen cada 2 segundos
+        }
+
+        showSlides(); // Inicia la función para mostrar las imágenes
+    });
+</script>
 </body>
 </html>
