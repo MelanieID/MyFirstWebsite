@@ -88,3 +88,25 @@ footer {
     bottom: 0;
     width: 100%;
 }
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider de Fotos</title>
+    <style>
+        /* Estilos para el contenedor principal del slider */
+        .slider-container {
+            max-width: 100%; /* Ancho máximo del slider */
+            margin: 0 auto; /* Centra el slider horizontalmente */
+            position: relative; /* Posición relativa para los elementos internos */
+            overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
+        }
+        /* Estilos para el contenedor de las imágenes */
+        .slider-content {
+            display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
+            transition: transform 0.5s ease; /* Transición suave al cambiar las imágenes */
+        }
+        /* Estilos para cada imagen del slider */
+        .slider-item {
+            min-width: 100%; /* Cada imagen ocupa al menos el ancho completo del contenedor */
+            flex: 0 0 auto; /* Permite que las imágenes mantengan su tamaño original */
+            height: auto;
+        }
