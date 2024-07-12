@@ -88,25 +88,44 @@ footer {
     bottom: 0;
     width: 100%;
 }
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider de Fotos</title>
-    <style>
-        /* Estilos para el contenedor principal del slider */
-        .slider-container {
-            max-width: 100%; /* Ancho máximo del slider */
-            margin: 0 auto; /* Centra el slider horizontalmente */
-            position: relative; /* Posición relativa para los elementos internos */
-            overflow: hidden; /* Oculta cualquier contenido que sobresalga del contenedor */
+.slider-container {
+            max-width: 1000px;
+            max-height: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
         }
-        /* Estilos para el contenedor de las imágenes */
         .slider-content {
-            display: flex; /* Utiliza flexbox para alinear las imágenes horizontalmente */
-            transition: transform 0.5s ease; /* Transición suave al cambiar las imágenes */
+            display: flex;
+            transition: transform 1s ease;
+            width: 300%; /* Ajusta el ancho según el número de imágenes */
         }
-        /* Estilos para cada imagen del slider */
         .slider-item {
-            min-width: 100%; /* Cada imagen ocupa al menos el ancho completo del contenedor */
-            flex: 0 0 auto; /* Permite que las imágenes mantengan su tamaño original */
-            height: auto;
+            flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
         }
+        .slider-item img {
+            width: 1000px; /* Las imágenes se ajustan al ancho del contenedor */
+            height: 800px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
