@@ -17,7 +17,7 @@ body {
 header {
     font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 24px;
   font-style: normal;
     /* Color de fondo del encabezado */
     background-color: #013A63;
@@ -46,20 +46,38 @@ nav ul {
 /* Estilos para los elementos de la lista en la barra de navegación */
 nav ul li {
     /* Muestra los elementos en línea */
-    display: inline;
+    display: inline-block;
     /* Elimina los márgenes */
     margin: 0;
+    position: relative;
 }
+
 
 /* Estilos para los enlaces en la barra de navegación */
 nav ul li a {
-    /* Color del texto del enlace */
-    color: #fff;
-    /* Relleno interno del enlace */
-    padding: 0.5rem 1rem;
-    /* Elimina el subrayado por defecto */
-    text-decoration: none;
-}
+    display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li ul li {
+            display: block;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+
 
 /* Estilos para el contenido principal */
 main {
@@ -71,7 +89,7 @@ main {
 footer {
     font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 24px;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
@@ -88,9 +106,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
-.slider-container {
+
+        /* Estilos para el contenedor principal del slider */
+        .slider-container {
             max-width: 1000px;
-            max-height: 800px;
+            max-height: 1000px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
@@ -98,14 +118,14 @@ footer {
         .slider-content {
             display: flex;
             transition: transform 1s ease;
-            width: 300%; /* Ajusta el ancho según el número de imágenes */
+            width: 100%; /* Ajusta el ancho según el número de imágenes */
         }
         .slider-item {
             flex: 0 0 100%; /* Cada imagen ocupa el 100% del contenedor */
         }
         .slider-item img {
             width: 1000px; /* Las imágenes se ajustan al ancho del contenedor */
-            height: 800px;
+            height: 1000px;
         }
         .prev, .next {
             cursor: pointer;
