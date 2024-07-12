@@ -9,7 +9,7 @@
     <!-- Configura el viewport para que el sitio sea responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Título de la página que aparece en la pestaña del navegador -->
-    <title>Melydel</title>
+    <title>Nosotros</title>
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="styles.css">
@@ -17,8 +17,7 @@
 <body>
     <!-- Sección de encabezado del sitio -->
     <header>
-        <h1>Melydel Publicity </h1>
-        <p>Diseño y Publicidad</p>
+        <h1>Nosotros</h1>
     </header>
     <!-- Barra de navegación con enlaces -->
     <nav>
@@ -38,16 +37,58 @@
     <!-- Contenido principal de la página -->
     <main>
         <section>
-            <h2>Acerca de este sitio</h2>
-            <p>Este es un sitio web de ejemplo para aprender HTML y CSS.</p>
+            <h2>Melydel Publicity</h2>
+            <p>Somos una agencia de diseño y publicidad especializada en crear diseños únicos en cualquier tipo de estilo</p>
         </section>
         <img src="Melydel.png" height="200" width="200">
-    </br>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oOVZvSsxcRw?si=rRkfHKCkUhs0mrSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
+    <div class="slider-container">
+        <div class="slider-content">
+            <div class="slider-item">
+                <img src="imagen1.png" alt="Imagen 1">
+            </div>
+            <div class="slider-item">
+                <img src="imagen2.png" alt="Imagen 2">
+            </div>
+            <div class="slider-item">
+                <img src="imagen3.png" alt="Imagen 3">
+            </div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+    
+        function showSlides() {
+            const slides = document.querySelectorAll(".slider-item");
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach((slide, index) => {
+                slide.style.display = index === slideIndex ? "block" : "none";
+            });
+            setTimeout(() => {
+                slideIndex++;
+                showSlides();
+            }, 3000); // Cambia la imagen cada 3 segundos
+        }
+    </script>
     <!-- Pie de página del sitio -->
     <footer>
         <p>&copy; 2024 Portfolio </p>
     </footer>
+ <!-- Contenedor principal del slider -->
+ 
 </body>
 </html>
