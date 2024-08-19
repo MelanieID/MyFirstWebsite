@@ -24,6 +24,7 @@
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="About me.html">Nosotros</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
             <li>
                 <a href="About me.html">Contacto</a>
                 <ul>
@@ -38,64 +39,12 @@
     <main>
         <section>
             <h2>Melanie Ibarra</h2>
-            <p>Soy una estudiante de diseño digital, tengo experiencia en diseño gráfico, animación 3D y edición de video.</p>
+            <p>Soy una estudiante de diseño digital en la Universidad Tecnológica de Durango. Me gusta diseño gráfico, la animación, el diseño 3D y la edición de video. Para mi diseñar es tener el poder de contar una historia por medio de elementos gráficos, los cuales combinan la imaginción con la realidad. Yo siempre estoy en busqueda de nuevos desafíos que me ayuden a sacar todo mi potencial y toda mi cretividad, soy una persona que siempre esta buscando nuevas cosas que aprender y nuevos retos que suprerar.</p>
+            <h3>Habilidades</h3>
+            <p> Observación, Investigación, Creatividad, Adaptabilidad, Trabajo en equipo, Ilustración </p>
         </section>
         <img src="Melydel.png" height="200" width="200">
-        <section>
-            <h2>Portfolio</h2>
-        </section>
     </main>
-    <div class="slider-container">
-        <div class="slider-content">
-            <div class="slider-item">
-                <img src="imagen1.png" alt="Imagen 1">
-            </div>
-            <div class="slider-item">
-                <img src="imagen2.png" alt="Imagen 2">
-            </div>
-            <div class="slider-item">
-                <img src="imagen3.png" alt="Imagen 3">
-            </div>
-            <div class="slider-item">
-                <img src="imagen4.jpg" alt="Imagen 4">
-            </div>
-            <div class="slider-item">
-                <img src="imagen5.jpg" alt="Imagen 5">
-            </div>
-            <div class="slider-item">
-                <img src="imagen6.jpg" alt="Imagen 6">
-            </div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    
-    <script>
-        let slideIndex = 0;
-        showSlides();
-    
-        function plusSlides(n) {
-            slideIndex += n;
-            showSlides();
-        }
-    
-        function showSlides() {
-            const slides = document.querySelectorAll(".slider-item");
-            if (slideIndex >= slides.length) {
-                slideIndex = 0;
-            }
-            if (slideIndex < 0) {
-                slideIndex = slides.length - 1;
-            }
-            slides.forEach((slide, index) => {
-                slide.style.display = index === slideIndex ? "block" : "none";
-            });
-            setTimeout(() => {
-                slideIndex++;
-                showSlides();
-            }, 3000); // Cambia la imagen cada 3 segundos
-        }
-    </script>
     <!-- Pie de página del sitio -->
     <footer>
         <p>&copy; 2024 Portfolio </p>
